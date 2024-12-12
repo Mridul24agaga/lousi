@@ -3,19 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 21, 41;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
 }
+
+@supports (backdrop-filter: blur(0px)) {
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+@font-face {
+  font-family: "Averta ExtraBold";
+  src: url("https://db.onlinewebfonts.com/t/efc5d27fcf85239bbfee077b689e3ac9.eot");
+  src: url("https://db.onlinewebfonts.com/t/efc5d27fcf85239bbfee077b689e3ac9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/efc5d27fcf85239bbfee077b689e3ac9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/efc5d27fcf85239bbfee077b689e3ac9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/efc5d27fcf85239bbfee077b689e3ac9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/efc5d27fcf85239bbfee077b689e3ac9.svg#Averta ExtraBold")format("svg");
+}
+
+/* Rest of your global styles */
+
+
+
